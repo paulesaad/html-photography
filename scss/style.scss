@@ -78,3 +78,130 @@ img {max-width:100%;}
 /**
  * YOUR CODE HERE
  */
+
+$white: rgb(240, 240, 240);
+$lightgray: rgb(136, 136, 136);
+$mediumgray: rgb(72, 69, 72);
+$darkgray: rgb(24, 24, 24);
+$red: rgb(229, 58, 66);
+
+
+html, body {
+    background: $darkgray;
+    font-color:$lightgray;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color:$white;
+}
+
+.container {
+    max-width: 60ch;
+    margin:auto;
+    padding: 1.5rem;
+
+    .toolbar {
+        font-weight:bold;
+        span {
+            &:first-child {
+                color:$white;
+            }
+        }
+    }
+    .page-title {
+        max-width: 250px;
+        margin: 4rem auto;
+        position:relative;
+
+            &::before {
+                content:"";
+                display:block;
+                padding-top:100%;
+                background-image: url(http://cdn.shopify.com/s/files/1/0080/8372/products/tattly_julia_rothman_instant_camera_web_design_01_grande.jpg?v=1334941295);
+                filter: grayscale(100%);
+                border-radius:50%;
+                opacity:0.4;
+                background-size:cover;
+            }
+        span {
+            color:$white;
+            font-weight:bold;
+            display:block;
+            position:absolute;
+            bottom:0;
+            left:0;
+            width:100%;
+            text-align:center;
+        }
+    }
+    .image {
+        position:relative;
+        @media (min-width: 800px) {
+            margin-right:200px;
+        }
+        img {
+            filter:grayscale(100%);
+            transition: all .25s ease;
+            &:hover {
+                filter:grayscale(0);
+            }
+        }
+
+        h3 {
+            color: $lightgray;
+            margin: 2rem 0;
+            span {
+                color: $mediumgray;
+                font-size: .5em;
+            }
+        }
+        ul {
+            list-style:none;
+            padding-left:0;
+            li {
+                &:first-child {
+                    font-weight: bold;
+                    color: $red;
+                    // &:before {
+                    //     content: "";
+                    //     display: inline-block;
+                    //     background-image: 
+                    //     background-size: cover;
+                    //     background-position:centered;
+                    //     filter: 
+                    //     height:1.5em;
+                    //     width:1.5em;
+                    // }
+                }
+            }
+
+            @media (min-width: 800px) {
+                position: absolute;
+                top:0;
+                left:100%;
+                margin:0;
+                width: 200px;
+                padding-left: 1.5rem;
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
